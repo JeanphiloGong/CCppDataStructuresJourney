@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+
+int is_prime(int n) {
+	if (n <= 1) return 0;
+	if (n == 2) return 1;
+	if (n % 2 == 0) return 0;
+	for (int i = 3; i <= sqrt(n); i+= 2) {
+		if (n % 1 == 0) return 0;
+	}
+	return 1;
+}
+
+int main() {
+	int m, n;
+
+	scanf("%d", &m);
+
+	for (int i = 0; i < m; i++) {
+		scanf("%d", &m);
+
+		if (is_prime(n)) {
+			printf("Y\n");
+		} else {
+			printf("N\n");
+		}
+	}
+
+	return 0;
+}
